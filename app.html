@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <title></title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo"><img src="IMG_6260.PNG" alt="" id=logo></div>
+      <nav class="global-nav">
+        <ul class="global-nav__list">
+          <li class="global-nav__item"><a href="home.html">home</a></li>
+          <li class="global-nav__item"><a href="profile.html">profile</a></li>
+          <li class="global-nav__item"><a href="biography.html">biography</a></li>
+          <li class="global-nav__item"><a href="app.html">app</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" id="js-hamburger">
+        <span class="hamburger__line hamburger__line--1"></span>
+        <span class="hamburger__line hamburger__line--2"></span>
+        <span class="hamburger__line hamburger__line--3"></span>
+      </div>
+      <div class="black-bg" id="js-black-bg"></div>
+
+    </header>
+
+    <main>
+      <div class="app_desc">
+        <h2>javascriptを用いた例</h2>
+      </div>
+      <div class="app_content">
+
+        <div class="omikuji">
+          <h2>omikuji</h2>
+          <button id = "btn">start omikuji</button>
+          <div id ="disp"></div></div>
+
+          <div class="counter">
+            <h2>Counter</h2>
+            <div id="disp-count"></div>
+            <button id = "down">down</button>
+            <button id = "up">up</button>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <div class="footer_content">
+        <ul>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+      </div>
+      </footer>
+
+<script>
+var omikuji =["大吉","中吉","小吉","凶"];
+var btn = document.getElementById("btn") ;
+var disp =document.getElementById("disp");
+var num = 0 ;
+
+btn.addEventListener("click",function(){
+ var num =  Math.floor(Math.random()*omikuji.length);
+ disp.innerHTML = omikuji[num];
+
+ if(omikuji[num]=="大吉"){
+  alert("おめでとう");}
+ else if (omikuji[num]=="凶"){
+  alert("どんまい");}
+else{alert("ふつう");}
+
+})
+
+var disp_count = document.getElementById("disp-count");
+var up =document.getElementById("up");
+var down = document.getElementById("down");
+//alert(disp_count);←これは確認の時に使う
+var count = 0 ;
+up.addEventListener("click" , function(){
+  count += 1 ;
+  disp_count.innerHTML = count ;
+})
+down.addEventListener("click" , function(){
+count -= 1 ;
+disp_count.innerHTML = count ;
+})
+
+function toggleNav() {
+var body = document.body;
+var hamburger = document.getElementById('js-hamburger');
+var blackBg = document.getElementById('js-black-bg');
+
+hamburger.addEventListener('click', function() {
+  body.classList.toggle('nav-open');
+});
+blackBg.addEventListener('click', function() {
+  body.classList.remove('nav-open');
+});
+}
+toggleNav();
+</script>
+  </body>
+</html>
