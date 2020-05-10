@@ -1,0 +1,19 @@
+footer{
+  height:50px;
+  background: white;
+}
+
+.footer_content{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+footer li{
+  text-align: center;
+  display: inline-block;
+}
+
+footer a{
+  color:black;
+}
