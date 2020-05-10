@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="profile.css">
+    <title></title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo"><img src="IMG_6260.PNG" alt="" id=logo></div>
+      <nav class="global-nav">
+        <ul class="global-nav__list">
+          <li class="global-nav__item"><a href="home.html">home</a></li>
+          <li class="global-nav__item"><a href="profile.html">profile</a></li>
+          <li class="global-nav__item"><a href="biography.html">biography</a></li>
+          <li class="global-nav__item"><a href="app.html">app</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" id="js-hamburger">
+        <span class="hamburger__line hamburger__line--1"></span>
+        <span class="hamburger__line hamburger__line--2"></span>
+        <span class="hamburger__line hamburger__line--3"></span>
+      </div>
+      <div class="black-bg" id="js-black-bg"></div>
+
+    </header>
+    <main>
+      <div class="main_tabcontrol">
+      <p id="tabcontrol">
+         <a href="#tabpage1">profile1</a>
+         <a href="#tabpage2">profile2</a>
+      </p>
+    </div>
+      <div id="tabbody">
+         <div id="tabpage1">  <p>2017年4月日本大学理工学部電子工学科入学</p>
+           <p>2021年新卒</p>
+           <p>大学では主に電子回路、回路設計について学
+             んでいます</p>
+             <p>環境発電について研究しています</p>
+             <p>最近独学でhtml,css,javascriptの勉強始めました</p>
+               <p>在学中にReact,HTTP requestも勉強したいと考えています</p>
+                 <p>3DCG,VR,Web,アプリ開発に興味があります</p>
+                 <p>趣味でdj,イベント企画をしたりしています</p></div>
+         <div id="tabpage2">  <p>[性格・特徴]</p>
+           <p>行動力/企画力がある</p>
+           <p>課題解決能力がある</p>
+           <p>チームをまとめる力がある</p>
+           <p>視野が広い</p>
+           <p>クリエイティブかつ新しいことが好き</p>
+           <p>良い/悪い意味で完璧主義</p></div>
+
+      </div>
+
+
+
+
+</main>
+
+<footer>
+  <div class="footer_content">
+  <ul>
+    <li><a href="contact.html">contact</a></li>
+  </ul>
+</div>
+</footer>
+<script type="text/javascript">
+
+   var tabs = document.getElementById('tabcontrol').getElementsByTagName('a');
+   var pages = document.getElementById('tabbody').getElementsByTagName('div');
+
+   function changeTab() {
+
+      var targetid = this.href.substring(this.href.indexOf('#')+1,this.href.length);
+
+
+      for(var i=0; i<pages.length; i++) {
+         if( pages[i].id != targetid ) {
+            pages[i].style.display = "none";
+         }
+         else {
+            pages[i].style.display = "block";
+         }
+      }
+
+
+      for(var i=0; i<tabs.length; i++) {
+         tabs[i].style.zIndex = "0";
+      }
+      this.style.zIndex = "10";
+
+
+      return false;
+   }
+
+
+   for(var i=0; i<tabs.length; i++) {
+      tabs[i].onclick = changeTab;
+   }
+
+   
+   tabs[0].onclick();
+
+   function toggleNav() {
+   var body = document.body;
+   var hamburger = document.getElementById('js-hamburger');
+   var blackBg = document.getElementById('js-black-bg');
+
+   hamburger.addEventListener('click', function() {
+     body.classList.toggle('nav-open');
+   });
+   blackBg.addEventListener('click', function() {
+     body.classList.remove('nav-open');
+   });
+   }
+   toggleNav();
+</script>
+  </body>
+</html>
