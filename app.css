@@ -1,0 +1,51 @@
+main{
+  position: relative;
+  height: 600px;
+  background: white;
+  max-width: 100%;
+}
+
+.app_desc{
+  height: 100px;
+
+}
+
+.app_desc h2{
+  text-align: center;
+}
+
+.app_content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  max-height: 400px;
+}
+
+.omikuji{
+  border: 1px solid #ffffff;
+	box-shadow: 1px 1px 2px 0 #707070 inset;
+	border-radius: 4px;
+  padding:5%;
+  margin: 5%;
+}
+
+.counter{
+
+  border: 1px solid #ffffff;
+	box-shadow: 1px 1px 2px 0 #707070 inset;
+	border-radius: 4px;
+  padding:5%;
+  margin: 5%;
+}
+
+#disp_count{
+  display: flex;
+  display: inline-block;
+}
+
+@media (max-width:768px) {
+  .app_content{
+    flex-direction: column;
+  }
+}
