@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="header.css">
+    <title></title>
+  </head>
+  <body>
+    <header class="header">
+
+      <div class="logo"><img src="IMG_6260.PNG" alt="" id=logo></div>
+      <nav class="global-nav">
+        <ul class="global-nav__list">
+          <li class="global-nav__item"><a href="home.html">home</a></li>
+          <li class="global-nav__item"><a href="profile.html">profile</a></li>
+          <li class="global-nav__item"><a href="biography.html">biography</a></li>
+          <li class="global-nav__item"><a href="app.html">app</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" id="js-hamburger">
+        <span class="hamburger__line hamburger__line--1"></span>
+        <span class="hamburger__line hamburger__line--2"></span>
+        <span class="hamburger__line hamburger__line--3"></span>
+      </div>
+      <div class="black-bg" id="js-black-bg"></div>
+
+    </header>
+
+    <main>
+      <h3>mail : csta17083@g.nihon-u.ac.jp </h3>
+    </main>
+    <script>
+    function toggleNav() {
+      var body = document.body;
+      var hamburger = document.getElementById('js-hamburger');
+      var blackBg = document.getElementById('js-black-bg');
+
+      hamburger.addEventListener('click', function() {
+        body.classList.toggle('nav-open');
+      });
+      blackBg.addEventListener('click', function() {
+        body.classList.remove('nav-open');
+      });
+    }
+    toggleNav();
+  </script>
+  </body>
+</html>
