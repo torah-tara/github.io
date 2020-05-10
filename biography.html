@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="biography.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <title></title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo"><img src="IMG_6260.PNG" alt="" id=logo></div>
+      <nav class="global-nav">
+        <ul class="global-nav__list">
+          <li class="global-nav__item"><a href="home.html">home</a></li>
+          <li class="global-nav__item"><a href="profile.html">profile</a></li>
+          <li class="global-nav__item"><a href="biography.html">biography</a></li>
+          <li class="global-nav__item"><a href="app.html">app</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" id="js-hamburger">
+        <span class="hamburger__line hamburger__line--1"></span>
+        <span class="hamburger__line hamburger__line--2"></span>
+        <span class="hamburger__line hamburger__line--3"></span>
+      </div>
+      <div class="black-bg" id="js-black-bg"></div>
+
+    </header>
+    <main>
+      <div class="biography_content">
+        <div class="bio_content1">
+      <div class="glasses"><img src="IMG_6226.PNG" alt="">
+
+      </div>
+
+      <h2>miyazaki tara</h2>
+    </div>
+<div class="biobox">
+    <div class="bio_content2">
+
+
+    <p>  大学に入学したものの、目標がないままなんとなく大学生活を過ごしていました。大学2年の時、今自分が好きなことをしてみようと思い、音楽やクリエイティブな活動に取り組み始めました。
+
+まず、多くの海外レーベルやアーティストをクライアントに持つ音楽レーベル、ビートインク有限会社にてインターンを始めました。
+
+また、2018年11月に恵比寿Baticaにてイベントを企画しました。インターンをしていくうちに、自分自身でイベント企画を行いたいという思いが強くなり、また同時に、私自身がアーティスト達から受けた初期衝動を多くの人に感じて貰いたいと思ったからです。
+結果としては、全くの素人ながら200人の来場を達成しました。
+
+この経験から行動/企画することの大切さ、企画/運営の楽しさを知りました。
+
+現在は友人の紹介でソニースクエア渋谷プロジェクト(以下、SSSP)にてアルバイトをしています。
+最新のテクノロジーに触れ、自分の視野が日々広くなっていくことを強く感じています。
+2019年11月、sonyがaiboの開発環境としてaiboのライセンスプログラムであるaiboデベロッパープログラムを通じてソフトウェアAPIを公開しました。
+SSSPではaiboとAPI公開と共に公開されたプログラミング初心者向けツール、ビジュアルプログラミングを用い体験型企画を行なっていました。
+接客でエンジニアの方と話たり、デベロッパーサイトを見ることで自身のプログラミングの可能性(イメージ)が広がりました。
+現在はこのようなコードを書いてみたいという興味からプログラミングの学習をしています。
+3DCG,VR,ARの開発にも興味があり日々勉学に励んでいます。
+    </p>
+  </div>
+</div>
+  </div></main>
+
+  <footer>
+    <div class="footer_content">
+    <ul>
+      <li><a href="contact.html">contact</a></li>
+    </ul>
+  </div>
+  </footer>
+
+  <script>
+  function toggleNav() {
+  var body = document.body;
+  var hamburger = document.getElementById('js-hamburger');
+  var blackBg = document.getElementById('js-black-bg');
+
+  hamburger.addEventListener('click', function() {
+    body.classList.toggle('nav-open');
+  });
+  blackBg.addEventListener('click', function() {
+    body.classList.remove('nav-open');
+  });
+}
+toggleNav();
+  </script>
+  </body>
+</html>
